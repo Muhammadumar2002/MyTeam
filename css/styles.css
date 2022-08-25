@@ -1,9 +1,32 @@
 /* CUSTOM-PROPS */
 :root {
-
+--header-bg:#014E56;
+--CTA-bg-color:#F67E7E;
+--text-color:#ffffff;
+--feature-bg:#012F34;
+--story-gae-bg:#004047;
+--footer-bg:#002529;
 }
 
 /* FONT-FACE  */
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('../fonts/Livvic-Bold.woff2') format('woff2'),
+      url('../fonts/Livvic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Livvic';
+  src: url('../fonts/Livvic-SemiBold.woff2') format('woff2'),
+      url('../fonts/Livvic-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 /* GLOBAL-STYLES  */
@@ -25,9 +48,10 @@ body {
   height: 100%;
   background-color: #fff;
   color: #222;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: 'Livvic','Arial', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
   padding: 0;
   margin: 0;
 }
@@ -46,10 +70,10 @@ img {
 
 /* CONTAINER  */
 .container {
-  max-width: 1200px;
+  max-width: 1150px;
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,3 +96,72 @@ img {
 .main-content {
   flex-grow: 1;
 }
+
+/* SITE-HEADER START  */
+.header-hero-wrapper {
+  background-color: var(--header-bg);
+}
+.site-header {
+  padding-top: 77px;
+  padding-bottom: 77px;
+}
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+.site-header__img {
+  width: 160px;
+  height: 40px;
+  object-fit: contain;
+  white-space: nowrap;
+  padding-right: 10px;
+  margin-right: 70px;
+}
+.sitenav {
+    margin-right: auto;
+}
+.sitenav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sitenav__item:not(:last-child) {
+  margin-right: 40px;
+}
+.sitenav__link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.sitenav__link:hover{
+  color: var(--CTA-bg-color);
+  transition: color 0.3s ease-out;
+}
+.site-header__button{
+  width: 100%;
+  max-width: 153px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--text-color);
+  border-radius: 24px;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.site-header__button:hover{
+  border: 2px solid transparent;
+  border-radius: 24px;
+  background-color: var(--text-color);
+  color: #222;
+}
+.site-header__link {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: transparent;
+}
+.site-header__link:hover{
+  color: var(--footer-bg);
+}
+/* SITE-HEADER-END */
