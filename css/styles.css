@@ -27,7 +27,14 @@
   font-display: swap;
 }
 
-
+@font-face {
+  font-family: 'Livvic';
+  src: url('../fonts/Livvic-Medium.woff2') format('woff2'),
+      url('../fonts/Livvic-SemiBold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* GLOBAL-STYLES  */
 html {
@@ -327,3 +334,218 @@ img {
   opacity: 0.8;
 }
 /* SITE-FEATURE-END  */
+
+/* STORY START  */
+.story {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color:var(--story-gae-bg);
+  z-index: 0;
+
+}
+.story__container{
+  position: relative;
+}
+.story__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 56px;
+
+}
+.story__heading-decoration {
+  color: #79C8C7;
+}
+
+.story__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.story__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  align-items: center;
+}
+.story__item:not(:last-child){
+  margin-right: 30px;
+}
+.story__item-text {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color:var(--text-color);
+  margin-bottom: 24px;
+}
+.story__item-text::before{
+  position: absolute;
+  background-image:url(../img/bg-center.svg);
+  background-repeat:no-repeat;
+  background-position: center;
+  content: "";
+}
+.story__item-author-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+.story__item-author-name {
+  font-weight: 700;
+  color:#79C8C7;
+  margin-bottom: 2px;
+}
+.story__item-author-job {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+.story__item-author-img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.story-center-img{
+  position: absolute;
+  top: -140px;
+  left: -164px;
+}
+.story-bottom-img{
+  position: absolute;
+  left: 1040px;
+  top: 457px;
+  z-index: -99;
+}
+/* STORY END  */
+
+/* CTA START  */
+.CTA {
+  z-index: 99;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background-color:var(--CTA-bg-color);
+}
+.CTA__container {
+  padding-left: 100px;
+  padding-right: 150px;
+  position: relative;
+}
+.CTA__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.CTA__heading {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #012F34;
+}
+.CTA__button {
+  border: 2px solid var(--feature-bg);
+  color: var(--feature-bg);
+}
+.CTA__button:hover{
+  background-color:var(--feature-bg);
+  color: var(--text-color);
+}
+.CTA__button-img{
+  position: absolute;
+  right:1140px;
+  bottom: -177px;
+  z-index: 2;
+}
+/* CTA END  */
+
+/* SITE FOOTER START  */
+.site-footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color:var(--footer-bg);
+  z-index: 999;
+}
+.site-footer__inner{
+  display: flex;
+}
+.site-footer__logo-wrapper{
+  margin-right: 125px;
+}
+.site-footer__logo{
+
+}
+.site-footer__img{
+  margin-bottom: 25px;
+  width: 160px;
+  height: 40px;
+}
+
+.sitenav__addres{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  margin-right: auto;
+}
+.sitenav__addres-link{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(255, 255,255, 0.6);
+}
+
+/* SOCIALS  */
+.site-footer__socials {
+
+}
+.site-footer__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.site-footer__item:not(:last-child) {
+  margin-right: 16px;
+}
+.site-footer__link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.site-footer__link:hover{
+  color: var(--CTA-bg-color);
+}
+.site-footer__img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.site-footer__info{
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  color:rgba(225, 225, 225, 0.6);
+}
+
+
+/* SITE-FOOTER END  */
